@@ -1,14 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { changeInput } from './state/actionCreators';
 import { actionCreators } from './state/index';
 
 interface State {
   account: number;
-  input?: number
+  input: number;
 }
 
 const App = () => {
-  const state = useSelector((state: State) => state);
+  const { account, input } = useSelector((state: State) => state);
   const dispatch = useDispatch();
 
   const { depositMoney, withdrawMoney } = bindActionCreators(
@@ -16,16 +17,21 @@ const App = () => {
     dispatch
   );
 
-
   return (
-  <div className='app'>
-    Amount in account: 
-    <h1>{state.account}</h1>
-    <input type="number" value={state?.input}/>
-    <button onClick={() => withdrawMoney(100)}>Withdraw</button>
-    <button onClick={() => depositMoney(100)}>Deposit</button>
+    <div className='app'>
+      Amount in account:
+      <h1>{account}</h1>
+      <input
+        type='number'
+        value={input}
+        onChange={(e) => {
+          changeInput(parseInt(e.target.value));
+        }}
+      />
+      <button onClick={() => withdrawMoney(input)}>Withdraw</button>
+      <button onClick={() => depositMoney(input)}>Deposit</button>
     </div>
-    );
+  );
 };
 
 export default App;

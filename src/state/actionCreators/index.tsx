@@ -16,9 +16,9 @@ export const withdrawMoney = (amount: number) => {
   };
 };
 
-export const changeInput = (amount: number | null) => {
+export const changeInput = (amount: number) => {
   return (
-    dispatch: (arg0: { type: string; payload: number | null }) => void
+    dispatch: (arg0: { type: string; payload: number}) => void
   ) => {
     dispatch({
       type: 'input',
