@@ -12,6 +12,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 # Dependencies
 
  - React: Javascript front-end library used for building user interfaces
- - React-Redux: State management library
+ - Redux: State management library
  - Sass: CSS extension/pre-processor scripting language that'll compile into CSS
  - Typescript: Strongly typed superset of Javascript used for tooling and that compiles into plain Javascript
