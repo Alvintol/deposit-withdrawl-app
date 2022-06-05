@@ -12,7 +12,7 @@ const App = () => {
   const { account, input } = useSelector((state: State) => state);
   const dispatch = useDispatch();
 
-  const { depositMoney, withdrawMoney } = bindActionCreators(
+  const { depositMoney, withdrawMoney, changeInput } = bindActionCreators(
     actionCreators,
     dispatch
   );
@@ -24,12 +24,24 @@ const App = () => {
       <input
         type='number'
         value={input}
-        onChange={(e) => {
-          changeInput(parseInt(e.target.value));
-        }}
+        onChange={(e) => changeInput(parseInt(e.target.value))}
       />
-      <button onClick={() => withdrawMoney(input)}>Withdraw</button>
-      <button onClick={() => depositMoney(input)}>Deposit</button>
+      <button
+        onClick={() => {
+          withdrawMoney(input);
+          changeInput(0);
+        }}
+      >
+        Withdraw
+      </button>
+      <button
+        onClick={() => {
+          depositMoney(input);
+          changeInput(0);
+        }}
+      >
+        Deposit
+      </button>
     </div>
   );
 };
