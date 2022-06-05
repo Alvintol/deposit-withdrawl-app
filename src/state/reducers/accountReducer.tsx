@@ -1,9 +1,9 @@
 interface Action {
   type: string;
   payload: number;
-}
+};
 
-const reducer = (state: number = 0, action: Action) => {
+const accountReducer = (state: number = 0, action: Action) : number => {
   switch (action.type) {
     case 'deposit':
       return state + action.payload;
@@ -14,4 +14,4 @@ const reducer = (state: number = 0, action: Action) => {
   }
 };
 
-export default reducer;
+export default accountReducer;
