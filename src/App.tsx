@@ -22,8 +22,8 @@ const App = () => {
     Amount in account: 
     <h1>{state.account}</h1>
     <input type="number" value={state?.input}/>
-    <button onClick={() => withdrawMoney}>Withdraw</button>
-    <button onClick={() => depositMoney}>Deposit</button>
+    <button onClick={() => withdrawMoney(100)}>Withdraw</button>
+    <button onClick={() => depositMoney(100)}>Deposit</button>
     </div>
     );
 };
