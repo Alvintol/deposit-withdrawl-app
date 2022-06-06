@@ -2,7 +2,9 @@
 
 This project is a simple React based deposit/withdrawal app. The focus of creating this app is to use my newly acquired  Redux and Typescript knowledge.
 
-[Video of app demo]()
+[Video of app demo](https://user-images.githubusercontent.com/96437758/172085203-4c8af83d-5c24-4435-92a1-6571bfe10280.mov)
+
+
 
 ## Running the project
 
