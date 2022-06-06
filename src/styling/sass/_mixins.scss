@@ -1,0 +1,34 @@
+$dark: rgba(24, 24, 24, 0.872);
+$mute: rgba(189, 189, 189, 0.762);
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin border {
+  border-style: outset;
+  border-color: $mute;
+  border-image: initial;
+}
+@mixin topRound {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+@mixin bottomRound {
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+

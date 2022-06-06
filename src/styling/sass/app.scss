@@ -1,0 +1,55 @@
+@import './mixins';
+
+body {
+  @include flexColumn;
+  @include center;
+  overflow: hidden;
+  background-color: #cc8800;
+  background-image: url(http://www.transparenttextures.com/patterns/cartographer.png);
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+
+  #app {
+    @include flexColumn;
+    @include center;
+    width: 25vw;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $mute;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 15px;
+
+    h2 {
+      color: rgba(69, 54, 211, 0.817);
+      border-bottom: thin solid $dark;
+      text-shadow: 0 0 $dark;
+    }
+
+    #amount {
+      @include flexRow;
+
+      #currency {
+        border: thin solid;
+        padding: 0 2px 0 2px;
+        font-weight: bolder;
+        background-color: rgba(240, 248, 255, 0.564);
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    #button-container {
+      @include flexRow;
+
+      & > * {
+        margin: 2%;
+      }
+    }
+  }
+}

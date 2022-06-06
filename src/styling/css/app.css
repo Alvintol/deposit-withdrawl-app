@@ -1,1 +1,54 @@
-
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #cc8800;
+  background-image: url(http://www.transparenttextures.com/patterns/cartographer.png);
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+body #app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 25vw;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgba(189, 189, 189, 0.762);
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 15px;
+}
+body #app h2 {
+  color: rgba(69, 54, 211, 0.817);
+  border-bottom: thin solid rgba(24, 24, 24, 0.872);
+  text-shadow: 0 0 rgba(24, 24, 24, 0.872);
+}
+body #app #amount {
+  display: flex;
+  flex-direction: row;
+}
+body #app #amount #currency {
+  border: thin solid;
+  padding: 0 2px 0 2px;
+  font-weight: bolder;
+  background-color: rgba(240, 248, 255, 0.564);
+}
+body #app #amount input::-webkit-outer-spin-button,
+body #app #amount input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body #app #button-container {
+  display: flex;
+  flex-direction: row;
+}
+body #app #button-container > * {
+  margin: 2%;
+}
