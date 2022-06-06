@@ -25,11 +25,3 @@ export const changeInput = (amount: number) => {
   };
 };
 
-export const clearInput = () => {
-  return (dispatch: (arg0: { type: string; payload: number }) => void) => {
-    dispatch({
-      type: 'empty',
-      payload: 0,
-    });
-  };
-};

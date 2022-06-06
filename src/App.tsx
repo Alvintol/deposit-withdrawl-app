@@ -1,6 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { changeInput } from './state/actionCreators';
 import { actionCreators } from './state/index';
 
 interface State {
@@ -17,17 +16,18 @@ const App = () => {
     dispatch
   );
 
+
   return (
     <div className='app'>
       Amount in account:
-      <h1>{account}</h1>
+      <h1>$ {account.toLocaleString("en-US")}</h1>
       <input
         type='number'
         value={input}
-        onChange={(e) => changeInput(parseInt(e.target.value))}
+        onChange={(e) => changeInput(Number(e.target.value))}
       />
       <button
-        onClick={() => {
+        onClick={() : void => {
           withdrawMoney(input);
           changeInput(0);
         }}
@@ -35,7 +35,7 @@ const App = () => {
         Withdraw
       </button>
       <button
-        onClick={() => {
+        onClick={() : void =>  {
           depositMoney(input);
           changeInput(0);
         }}
