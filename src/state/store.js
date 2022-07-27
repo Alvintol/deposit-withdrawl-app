@@ -1,4 +1,4 @@
-"use strict";
+
 exports.__esModule = true;
 var toolkit_1 = require("@reduxjs/toolkit");
 var index_1 = require("./reducers/index");

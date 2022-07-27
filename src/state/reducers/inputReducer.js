@@ -1,4 +1,4 @@
-"use strict";
+
 exports.__esModule = true;
 var inputReducer = function (state, action) {
     if (state === void 0) { state = 0; }

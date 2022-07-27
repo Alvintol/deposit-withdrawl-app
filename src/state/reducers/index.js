@@ -1,4 +1,4 @@
-"use strict";
+
 exports.__esModule = true;
 var redux_1 = require("redux");
 var accountReducer_1 = require("./accountReducer");

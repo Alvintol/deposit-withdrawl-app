@@ -1,4 +1,4 @@
-"use strict";
+
 exports.__esModule = true;
 var react_redux_1 = require("react-redux");
 var redux_1 = require("redux");

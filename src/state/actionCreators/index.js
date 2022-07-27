@@ -1,4 +1,3 @@
-"use strict";
 exports.__esModule = true;
 exports.changeInput = exports.withdrawMoney = exports.depositMoney = void 0;
 var depositMoney = function (amount) {
